@@ -1,5 +1,0 @@
-{
-  "globalDependencies": {
-    "echarts": "registry:dt/echarts#0.0.0+20161005184000"
-  }
-}
