@@ -15843,7 +15843,6 @@ class CompConfigurationComponent extends _core_provider_baseHttp_base_http_servi
         };
         rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"].forkJoin([this.indexDBService.getDataAll(this.pagesUrl, query)]).subscribe(res => {
             this.pages = res && res[0];
-            console.log(this.pages);
             this.initPage();
         });
         this.showBool = true;
@@ -15882,7 +15881,6 @@ class CompConfigurationComponent extends _core_provider_baseHttp_base_http_servi
     }
     addPageComponet() {
         let addComp = this.modalService.open(_pages_workspace_page_page_add_page_add_component__WEBPACK_IMPORTED_MODULE_10__["PageAddComponent"]);
-        addComp.componentInstance.id = lodash__WEBPACK_IMPORTED_MODULE_7__["maxBy"](this.pages, o => o['id']) && lodash__WEBPACK_IMPORTED_MODULE_7__["maxBy"](this.pages, o => o['id'])['id'] || 0;
         addComp.componentInstance.datas = {
             state: 'addPage'
         };

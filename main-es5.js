@@ -1226,7 +1226,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         _this.createDBTab = function (table, db) {
           var objectStore = db.createObjectStore(table.name, {
-            keyPath: table.keyPath
+            keyPath: table.keyPath,
+            autoIncrement: true
           });
 
           for (var item in table.data[0]) {
@@ -1272,6 +1273,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var db = this.variables.getIndexDB();
           if (!db) return;
           return new Promise(function (resolve, reject) {
+            console.log(api, createObj);
             var objectStore = db.transaction([api], 'readwrite').objectStore(api);
             var request = objectStore.add(createObj);
 
@@ -1280,7 +1282,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             };
 
             request.onsuccess = function (event) {
-              console.log(api, createObj);
               resolve();
             };
           });

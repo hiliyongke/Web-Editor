@@ -21522,7 +21522,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           };
           rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"].forkJoin([this.indexDBService.getDataAll(this.pagesUrl, query)]).subscribe(function (res) {
             _this13.pages = res && res[0];
-            console.log(_this13.pages);
 
             _this13.initPage();
           });
@@ -21584,11 +21583,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this14 = this;
 
           var addComp = this.modalService.open(_pages_workspace_page_page_add_page_add_component__WEBPACK_IMPORTED_MODULE_10__["PageAddComponent"]);
-          addComp.componentInstance.id = lodash__WEBPACK_IMPORTED_MODULE_7__["maxBy"](this.pages, function (o) {
-            return o['id'];
-          }) && lodash__WEBPACK_IMPORTED_MODULE_7__["maxBy"](this.pages, function (o) {
-            return o['id'];
-          })['id'] || 0;
           addComp.componentInstance.datas = {
             state: 'addPage'
           };

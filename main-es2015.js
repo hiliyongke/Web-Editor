@@ -583,7 +583,7 @@ class IndexDBService extends _baseHttp_base_http_service__WEBPACK_IMPORTED_MODUL
          *
          */
         this.createDBTab = function (table, db) {
-            let objectStore = db.createObjectStore(table.name, { keyPath: table.keyPath });
+            let objectStore = db.createObjectStore(table.name, { keyPath: table.keyPath, autoIncrement: true });
             for (let item in table.data[0]) {
                 objectStore.createIndex(item, item, { unique: false });
             }
@@ -617,13 +617,13 @@ class IndexDBService extends _baseHttp_base_http_service__WEBPACK_IMPORTED_MODUL
         if (!db)
             return;
         return new Promise((resolve, reject) => {
+            console.log(api, createObj);
             let objectStore = db.transaction([api], 'readwrite').objectStore(api);
             let request = objectStore.add(createObj);
             request.onerror = error => {
                 reject(error);
             };
             request.onsuccess = event => {
-                console.log(api, createObj);
                 resolve();
             };
         });

@@ -33128,7 +33128,6 @@ class PageAddComponent extends _core_provider_baseHttp_base_http_service__WEBPAC
         });
     }
     getPageParams() {
-        this.page['id'] = this.id + 1;
         this.page['projectId'] = this.projectId;
         this.page['width'] = 1200;
         this.page['height'] = 700;
@@ -33508,7 +33507,6 @@ class ProjectAddComponent extends src_app_core_provider_baseHttp_base_http_servi
         this.projectObj = new _model_project_model__WEBPACK_IMPORTED_MODULE_1__["ProjectObject"]();
     }
     getPageParams() {
-        this.projectObj.id = this.id + 1;
         this.projectObj['description'] = this.projectObj['description'] || '无';
         return this.projectObj;
     }
@@ -33828,10 +33826,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_core_provider_toaster_sweetalert_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/core/provider/toaster/sweetalert.service */ "./src/app/core/provider/toaster/sweetalert.service.ts");
 /* harmony import */ var _project_add_project_add_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../project-add/project-add.component */ "./src/app/pages/workspace/project/project-add/project-add.component.ts");
 /* harmony import */ var _core_provider_indexDB_indexDB_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../../core/provider/indexDB/indexDB.service */ "./src/app/core/provider/indexDB/indexDB.service.ts");
-/* harmony import */ var loadsh__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! loadsh */ "./node_modules/loadsh/lodash.js");
-/* harmony import */ var loadsh__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(loadsh__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var src_app_core_emitSub_emit_sub_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! src/app/core/emitSub/emit-sub.service */ "./src/app/core/emitSub/emit-sub.service.ts");
-
+/* harmony import */ var src_app_core_emitSub_emit_sub_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/core/emitSub/emit-sub.service */ "./src/app/core/emitSub/emit-sub.service.ts");
 
 
 
@@ -33879,7 +33874,6 @@ class ListComponent extends _core_provider_baseHttp_base_http_service__WEBPACK_I
     }
     toAddProject() {
         let addProject = this.modalService.open(_project_add_project_add_component__WEBPACK_IMPORTED_MODULE_9__["ProjectAddComponent"]);
-        addProject.componentInstance.id = loadsh__WEBPACK_IMPORTED_MODULE_11__["maxBy"](this.projects, o => o.id) && loadsh__WEBPACK_IMPORTED_MODULE_11__["maxBy"](this.projects, o => o.id)['id'] || 0;
         addProject.componentInstance.datas = {
             state: 'addProject',
         };
@@ -33910,7 +33904,7 @@ class ListComponent extends _core_provider_baseHttp_base_http_service__WEBPACK_I
         }
     }
 }
-ListComponent.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ factory: function ListComponent_Factory() { return new ListComponent(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](src_app_core_provider_toaster_toastr_service__WEBPACK_IMPORTED_MODULE_7__["TempoToastrService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](src_app_core_provider_toaster_sweetalert_service__WEBPACK_IMPORTED_MODULE_8__["SweetalertService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_core_provider_indexDB_indexDB_service__WEBPACK_IMPORTED_MODULE_10__["IndexDBService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](src_app_core_emitSub_emit_sub_service__WEBPACK_IMPORTED_MODULE_12__["EmitSubService"])); }, token: ListComponent, providedIn: "root" });
+ListComponent.ngInjectableDef = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ factory: function ListComponent_Factory() { return new ListComponent(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModal"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](src_app_core_provider_toaster_toastr_service__WEBPACK_IMPORTED_MODULE_7__["TempoToastrService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](src_app_core_provider_toaster_sweetalert_service__WEBPACK_IMPORTED_MODULE_8__["SweetalertService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_core_provider_indexDB_indexDB_service__WEBPACK_IMPORTED_MODULE_10__["IndexDBService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](src_app_core_emitSub_emit_sub_service__WEBPACK_IMPORTED_MODULE_11__["EmitSubService"])); }, token: ListComponent, providedIn: "root" });
 
 
 /***/ }),
