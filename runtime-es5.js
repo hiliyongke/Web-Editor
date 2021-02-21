@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"pages-pages-module-ngfactory":"pages-pages-module-ngfactory","editor-develop-developmonet-module-ngfactory":"editor-develop-developmonet-module-ngfactory","workspace-workspace-module-ngfactory":"workspace-workspace-module-ngfactory"}[chunkId]||chunkId) +    "-es5.js"
+/******/ 		return __webpack_require__.p + "" + ({"pages-pages-module":"pages-pages-module","src-app-editor-develop-developmonet-module":"src-app-editor-develop-developmonet-module"}[chunkId]||chunkId) +    "-es5.js"
 /******/ 	}
 /******/
 /******/ 	// The require function

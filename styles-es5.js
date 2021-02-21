@@ -447,15 +447,15 @@
   /***/
   function _(module, exports, __webpack_require__) {
     __webpack_require__(
-    /*! D:\workspace\Web-Editor\src\styles.scss */
+    /*! /Users/liangma/Desktop/workspace/Web-Editor/src/styles.scss */
     "./src/styles.scss");
 
     __webpack_require__(
-    /*! D:\workspace\Web-Editor\node_modules\bootstrap\dist\css\bootstrap.min.css */
+    /*! /Users/liangma/Desktop/workspace/Web-Editor/node_modules/bootstrap/dist/css/bootstrap.min.css */
     "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 
     module.exports = __webpack_require__(
-    /*! D:\workspace\Web-Editor\node_modules\ngx-toastr\toastr.css */
+    /*! /Users/liangma/Desktop/workspace/Web-Editor/node_modules/ngx-toastr/toastr.css */
     "./node_modules/ngx-toastr/toastr.css");
     /***/
   }
