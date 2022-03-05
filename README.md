@@ -4,7 +4,10 @@
 
 ## 项目截图
 
-![截图](/src/assets/imgs/project.png)
+
+<img width="1278" alt="update" src="https://user-images.githubusercontent.com/14350577/156899334-b5b7b5fa-16ef-4077-906d-ecde085805f2.png">
+
+<img width="1264" alt="newdemo" src="https://user-images.githubusercontent.com/14350577/156899343-63bdfce5-206d-4f18-aab3-0a888ddc0716.png">
 
 ```diff
 ! DEMO数据存储在IndexedDB，不要清除本地缓存:cookie及其他网站数据 
